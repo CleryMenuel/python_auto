@@ -4,6 +4,7 @@ Voici un exemple de script Python qui définit une adresse IP statique sur un sy
 import subprocess
 
 # Définir l'adresse IP statique, le masque de sous-réseau et la passerelle par défaut
+test = input("tout va bien ? ")
 ip_address = "192.168.1.60"
 subnet_mask = "255.255.255.0"
 default_gateway = "192.168.1.254"
