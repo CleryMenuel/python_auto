@@ -3,9 +3,9 @@
 import os
 
 # Définir l'adresse IP statique, le masque de sous-réseau et la passerelle par défaut
-ip_address = "192.168.0.100"
-subnet_mask = "255.255.255.0"
-default_gateway = "192.168.0.1"
+ip_address = input("Entrez une adresse IP (Ex : 192.168.1.60) : ")
+subnet_mask = input("Entrez un masque de sous réseau (Ex : 255.255.255.0) : ")
+default_gateway = input("Entrez la passerelle par default (Ex : 192.168.1.254) : ")
 
 # Modifier le fichier de configuration réseau pour ajouter les paramètres d'adresse IP statique
 with open('/etc/network/interfaces', 'a') as config_file:
