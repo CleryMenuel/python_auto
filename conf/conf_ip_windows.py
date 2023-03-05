@@ -3,20 +3,18 @@ Voici un exemple de script Python qui définit une adresse IP statique sur un sy
 """
 import subprocess
 
-# Définir l'adresse IP statique, le masque de sous-réseau et la passerelle par défaut
-ip_address = input("Entrez une adresse IP (Ex : 192.168.1.60) : ")
-subnet_mask = input("Entrez un masque de sous réseau (Ex : 255.255.255.0) : ")
+# Définir l'adresse IP statique, le masque de sous-réseau, la passerelle par défaut le dns et l'interface réseau
+ip_address = input("Entrez une adresse IP (Ex : 192.168.1.60) : ") 
+subnet_mask = input("Entrez un masque de sous-réseau (Ex : 255.255.255.0) : ")
 default_gateway = input("Entrez la passerelle par default (Ex : 192.168.1.254) : ")
 dns_server = input("Entrez le DNS (Ex : 8.8.8.8) : ")
-#-------------------------BETA-------------------------
-#network_interface = input("Entrez l'interface réseau (Ex : Ethernet) : ") 
+network_interface = input("Entrez l'interface réseau (Ex : Ethernet) : ") 
 
 # Configurer l'adresse IP statique avec netsh
-#-------------------------BETA-------------------------
-#command = f"netsh interface ipv4 set address name=\"{network_interface}\" static {ip_address} {subnet_mask} {default_gateway}"
-#subprocess.call(command, shell=True)"""
-command = f"netsh interface ipv4 set address name=\"Ethernet\" static {ip_address} {subnet_mask} {default_gateway}"
+command = f"netsh interface ipv4 set address name=\"{network_interface}\" static {ip_address} {subnet_mask} {default_gateway}"
 subprocess.call(command, shell=True)
+"""command = f"netsh interface ipv4 set address name=\"Ethernet\" static {ip_address} {subnet_mask} {default_gateway}"
+subprocess.call(command, shell=True)"""
 
 # Configurer le DNS avec netsh
 command = f"netsh interface ipv4 add dnsserver name=\"Ethernet\" address={dns_server} index=1"
