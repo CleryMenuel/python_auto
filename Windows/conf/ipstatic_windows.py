@@ -13,8 +13,6 @@ network_interface = input("Entrez l'interface réseau (Ex : Ethernet) : ")
 # Configurer l'adresse IP statique avec netsh
 command = f"netsh interface ipv4 set address name=\"{network_interface}\" static {ip_address} {subnet_mask} {default_gateway}"
 subprocess.call(command, shell=True)
-"""command = f"netsh interface ipv4 set address name=\"Ethernet\" static {ip_address} {subnet_mask} {default_gateway}"
-subprocess.call(command, shell=True)"""
 
 # Configurer le DNS avec netsh
 command = f"netsh interface ipv4 add dnsserver name=\"Ethernet\" address={dns_server} index=1"
@@ -23,7 +21,7 @@ subprocess.call(command, shell=True)
 # Redémarrer le service DHCP pour éviter les conflits d'adresse IP
 subprocess.call("net stop dhcp & net start dhcp", shell=True)
 
-# Affichage de fin
+# Affichage de fin du script
 input("FINI...")
 
 """
