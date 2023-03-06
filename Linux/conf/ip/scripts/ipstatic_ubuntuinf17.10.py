@@ -1,4 +1,4 @@
-#Voici un exemple de script Python qui peut être utilisé pour configurer une adresse IP #statique persistante sur un système Linux :
+#Voici un exemple de script Python qui peut être utilisé pour configurer une adresse IP statique persistante sur un système Linux :
 
 import os
 
@@ -23,8 +23,7 @@ Notez que ce script doit être exécuté avec des privilèges de superutilisateu
 
 En utilisant ce script, les modifications de configuration réseau seront persistantes après un redémarrage du système. 
 Cependant, vous devez vous assurer que le fichier de configuration réseau est correctement modifié pour votre distribution Linux.
-"""
-"""
+
 Ce code Python configure une adresse IP statique persistante sur un système Linux en modifiant le fichier de configuration réseau et en redémarrant le service réseau.
 
 Voici une explication plus détaillée de ce code :

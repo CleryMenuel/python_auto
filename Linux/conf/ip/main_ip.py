@@ -6,11 +6,13 @@ if platform.system() == 'Linux':
     version = platform.release()
 
 # Vérifier si la version est inférieure à 20.04
-    if version < '20.04':
-        os.system("python scripts/ipstatic_ubuntuinf20.04.py")
-    elif version >= '20.04':
-        print("PARFAITTTTT")
+    if version < '17.10':
+        os.system("python scripts/ipstatic_ubuntuinf17.10.py")
+    elif version >= '17.10':
+        os.system("python scripts/ipstatic_ubuntusupegal17.10.py")
+# Gros message d'erreur si cela intervient contacter le dev du programme
     else:
-        print("La version du système d'exploitation est supérieure à 20.04. Le script ne sera pas exécuté.")
+        print("ERROR")
+# Message d'erreur car le systeme d'exploitation n'est pas un linux
 else:
     print("Le système d'exploitation n'est pas Linux. Le script ne sera pas exécuté.")
