@@ -12,3 +12,5 @@ if platform.system() == 'Linux':
         print("PARFAITTTTT")
     else:
         print("La version du système d'exploitation est supérieure à 20.04. Le script ne sera pas exécuté.")
+else:
+    print("Le système d'exploitation n'est pas Linux. Le script ne sera pas exécuté.")
