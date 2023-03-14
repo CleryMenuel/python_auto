@@ -20,7 +20,7 @@ def sauvegarde():
         print("Le dossier de destination existe déjà.")
 
 # Planifier la sauvegarde tous les jours à 23h
-schedule.every().day.at("14:10").do(sauvegarde)
+schedule.every().day.at("14:50").do(sauvegarde)
 
 while True:
     # Exécuter les tâches planifiées
